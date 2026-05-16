@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  <style>
+    
+:root {
+  --background: #ffffff;
+  --foreground: #202124;
+
+  --card: #f8f9fa;
+  --card-foreground: #202124;
+
+  --popover: #ffffff;
+  --popover-foreground: #202124;
+
+  --primary: #1a73e8;
+  --primary-rgb: 26, 115, 232;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1f3f4;
+  --secondary-foreground: #202124;
+
+  --muted: #e8eaed;
+  --muted-foreground: #5f6368;
+
+  --accent: #34a853;
+  --accent-foreground: #ffffff;
+
+  --destructive: #ea4335;
+
+  --border: #dadce0;
+  --input: #ffffff;
+  --ring: #1a73e8;
+
+  --radius: 0.5rem;
+
+  /* charts */
+  --chart-1: #1a73e8;
+  --chart-2: #ea4335;
+  --chart-3: #fbbc04;
+  --chart-4: #34a853;
+  --chart-5: #202124;
+}
+
+    body { background-color: var(--background); color: var(--foreground); }
+  </style>
+</head>
+<body>
+  <div class="relative w-full min-h-screen bg-[var(--background)]">
+  <div class="overflow-y-auto scrollbar-none">
+
+    <header class="sticky top-0 z-50 p-6 bg-[var(--card)]/80 backdrop-blur-xl shadow-lg">
+      <h1 class="text-2xl font-bold text-[var(--foreground)]">Dashboard</h1>
+    </header>
+
+    <main class="p-6">
+
+      <section class="mb-8">
+        <div class="bg-[var(--card)] rounded-3xl shadow-2xl p-6">
+          <h2 class="text-lg font-semibold text-[var(--foreground)] mb-4">Current Month Spending</h2>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-[var(--muted-foreground)]">Budget: $2,500</span>
+            <span class="text-xl font-bold text-[var(--foreground)]">$1,875</span>
+          </div>
+          <div class="w-full h-4 bg-[var(--muted)] rounded-full overflow-hidden">
+            <div class="h-full bg-[var(--primary)]" style="width: 75%;"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="bg-[var(--card)] rounded-3xl shadow-2xl p-6">
+          <h2 class="text-lg font-semibold text-[var(--foreground)] mb-4">Category Breakdown</h2>
+          <div class="flex justify-center">
+            <svg width="200" height="200" viewBox="0 0 42 42" class="donut">
+              <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#121a33"></circle>
+              <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="var(--chart-1)" stroke-width="3" stroke-dasharray="75 25" stroke-dashoffset="25"></circle>
+              <text x="50%" y="50%" class="donut-text" text-anchor="middle" dy=".3em" fill="var(--foreground)">75%</text>
+            </svg>
+          </div>
+          <ul class="mt-4 space-y-2">
+            <li class="flex items-center justify-between">
+              <span class="text-sm text-[var(--foreground)]">Groceries</span>
+              <span class="text-sm text-[var(--muted-foreground)]">$600</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-sm text-[var(--foreground)]">Entertainment</span>
+              <span class="text-sm text-[var(--muted-foreground)]">$450</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-sm text-[var(--foreground)]">Rent</span>
+              <span class="text-sm text-[var(--muted-foreground)]">$825</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="bg-[var(--card)] rounded-3xl shadow-2xl p-6">
+          <h2 class="text-lg font-semibold text-[var(--foreground)] mb-4">Recent Transactions</h2>
+          <ul class="space-y-4">
+            <li class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://loremflickr.com/800/600/groceries" alt="Transaction" class="w-10 h-10 rounded-full mr-3">
+                <div>
+                  <p class="text-sm font-medium text-[var(--foreground)]">Grocery Store</p>
+                  <p class="text-xs text-[var(--muted-foreground)]">Yesterday</p>
+                </div>
+              </div>
+              <span class="text-sm text-[var(--foreground)]">-$75.00</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://loremflickr.com/800/600/entertainment" alt="Transaction" class="w-10 h-10 rounded-full mr-3">
+                <div>
+                  <p class="text-sm font-medium text-[var(--foreground)]">Movie Theater</p>
+                  <p class="text-xs text-[var(--muted-foreground)]">2 days ago</p>
+                </div>
+              </div>
+              <span class="text-sm text-[var(--foreground)]">-$25.00</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center">
+                <img src="https://loremflickr.com/800/600/rent" alt="Transaction" class="w-10 h-10 rounded-full mr-3">
+                <div>
+                  <p class="text-sm font-medium text-[var(--foreground)]">Rent Payment</p>
+                  <p class="text-xs text-[var(--muted-foreground)]">5 days ago</p>
+                </div>
+              </div>
+              <span class="text-sm text-[var(--foreground)]">-$825.00</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+</div>
+</body>
+</html>

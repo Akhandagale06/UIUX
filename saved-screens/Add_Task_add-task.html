@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  <style>
+    
+:root {
+  --background: #fbf7fb;
+  --foreground: #221827;
+
+  --card: #ffffff;
+  --card-foreground: #221827;
+
+  --popover: #ffffff;
+  --popover-foreground: #221827;
+
+  --primary: #b24c7c;
+  --primary-rgb: 178, 76, 124;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1e6f0;
+  --secondary-foreground: #221827;
+
+  --muted: #efe2ed;
+  --muted-foreground: #6b5871;
+
+  --accent: #3aa6a6;
+  --accent-foreground: #0f172a;
+
+  --destructive: #e23a53;
+
+  --border: #e4d6e2;
+  --input: #ffffff;
+  --ring: #b24c7c;
+
+  --radius: 0.75rem;
+
+  /* charts */
+  --chart-1: #b24c7c;
+  --chart-2: #3aa6a6;
+  --chart-3: #f0a24f;
+  --chart-4: #6a4fb3;
+  --chart-5: #2f6fdf;
+}
+
+    body { background-color: var(--background); color: var(--foreground); }
+  </style>
+</head>
+<body>
+  <div class="relative w-full min-h-screen bg-[var(--background)]">
+  <div class="overflow-y-auto scrollbar-none">
+    <div class="container mx-auto px-4 py-10">
+      <div class="mb-8">
+        <h1 class="text-3xl font-semibold text-[var(--foreground)]">Add Task</h1>
+      </div>
+
+      <div class="bg-[var(--card)] rounded-2xl shadow-2xl p-6">
+        <form>
+          <div class="mb-4">
+            <label for="title" class="block text-sm font-medium text-[var(--foreground)] mb-2">Task Title</label>
+            <input type="text" id="title" class="shadow-sm bg-[var(--input)] border border-[var(--border)] text-[var(--foreground)] text-sm rounded-lg focus:ring-[var(--primary)] focus:border-[var(--primary)] block w-full p-2.5" placeholder="Enter task title" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="description" class="block text-sm font-medium text-[var(--foreground)] mb-2">Description</label>
+            <textarea id="description" rows="4" class="shadow-sm bg-[var(--input)] border border-[var(--border)] text-[var(--foreground)] text-sm rounded-lg focus:ring-[var(--primary)] focus:border-[var(--primary)] block w-full p-2.5" placeholder="Enter task description"></textarea>
+          </div>
+
+          <div class="mb-4">
+            <label for="dueDate" class="block text-sm font-medium text-[var(--foreground)] mb-2">Due Date</label>
+            <input type="date" id="dueDate" class="shadow-sm bg-[var(--input)] border border-[var(--border)] text-[var(--foreground)] text-sm rounded-lg focus:ring-[var(--primary)] focus:border-[var(--primary)] block w-full p-2.5">
+          </div>
+
+          <div class="mb-4">
+            <label for="priority" class="block text-sm font-medium text-[var(--foreground)] mb-2">Priority</label>
+            <select id="priority" class="shadow-sm bg-[var(--input)] border border-[var(--border)] text-[var(--foreground)] text-sm rounded-lg focus:ring-[var(--primary)] focus:border-[var(--primary)] block w-full p-2.5">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label for="category" class="block text-sm font-medium text-[var(--foreground)] mb-2">Category</label>
+            <input type="text" id="category" class="shadow-sm bg-[var(--input)] border border-[var(--border)] text-[var(--foreground)] text-sm rounded-lg focus:ring-[var(--primary)] focus:border-[var(--primary)] block w-full p-2.5" placeholder="Enter category">
+          </div>
+
+          <div class="flex justify-end">
+            <button type="button" class="bg-[var(--secondary)] hover:bg-[var(--muted)] text-[var(--secondary-foreground)] font-medium rounded-lg text-sm px-5 py-2.5 mr-2">Cancel</button>
+            <button type="submit" class="bg-[var(--primary)] hover:bg-[var(--primary)] focus:ring-4 focus:outline-none focus:ring-[var(--primary)] font-medium rounded-lg text-sm px-5 py-2.5 text-[var(--primary-foreground)]">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

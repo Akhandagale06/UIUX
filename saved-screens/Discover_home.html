@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  <style>
+    
+:root {
+  --background: #fbf7fb;
+  --foreground: #221827;
+
+  --card: #ffffff;
+  --card-foreground: #221827;
+
+  --popover: #ffffff;
+  --popover-foreground: #221827;
+
+  --primary: #b24c7c;
+  --primary-rgb: 178, 76, 124;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1e6f0;
+  --secondary-foreground: #221827;
+
+  --muted: #efe2ed;
+  --muted-foreground: #6b5871;
+
+  --accent: #3aa6a6;
+  --accent-foreground: #0f172a;
+
+  --destructive: #e23a53;
+
+  --border: #e4d6e2;
+  --input: #ffffff;
+  --ring: #b24c7c;
+
+  --radius: 0.75rem;
+
+  /* charts */
+  --chart-1: #b24c7c;
+  --chart-2: #3aa6a6;
+  --chart-3: #f0a24f;
+  --chart-4: #6a4fb3;
+  --chart-5: #2f6fdf;
+}
+
+    body { background-color: var(--background); color: var(--foreground); }
+  </style>
+</head>
+<body>
+  <div class="relative w-full min-h-screen bg-[var(--background)]">
+  <div class="overflow-y-auto scrollbar-none">
+
+    <div class="sticky top-0 z-50 bg-[var(--card)]/80 backdrop-blur-xl p-4">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin text-[var(--primary)] w-5 h-5">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+          <circle cx="12" cy="10" r="1" />
+        </svg>
+        <input type="text" placeholder="Search for restaurants or dishes" class="w-full bg-[var(--muted)] text-[var(--foreground)] rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" />
+      </div>
+    </div>
+
+    <div class="py-6 px-4">
+      <div class="flex space-x-4 overflow-x-auto scrollbar-none">
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Pizza</button>
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Sushi</button>
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Burgers</button>
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Italian</button>
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Mexican</button>
+        <button class="bg-[var(--secondary)] text-[var(--foreground)] rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap hover:bg-[var(--primary)] hover:text-[var(--primary-foreground)] transition-colors">Thai</button>
+      </div>
+    </div>
+
+    <div class="px-4 space-y-6">
+
+      <div class="relative rounded-3xl overflow-hidden shadow-xl">
+        <img src="https://source.unsplash.com/random/600x400?pizza" alt="Pizza Restaurant" class="w-full h-48 object-cover" />
+        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
+          <h3 class="text-lg font-semibold text-[var(--foreground)]">Luigi's Pizzeria</h3>
+          <div class="flex items-center text-sm text-[var(--muted-foreground)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 mr-1">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.5
+            <span class="mx-1">•</span>
+            25-35 min
+          </div>
+        </div>
+      </div>
+
+      <div class="relative rounded-3xl overflow-hidden shadow-xl">
+        <img src="https://source.unsplash.com/random/600x400?sushi" alt="Sushi Restaurant" class="w-full h-48 object-cover" />
+        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
+          <h3 class="text-lg font-semibold text-[var(--foreground)]">Tokyo Sushi Bar</h3>
+          <div class="flex items-center text-sm text-[var(--muted-foreground)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 mr-1">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            4.8
+            <span class="mx-1">•</span>
+            30-40 min
+          </div>
+        </div>
+      </div>
+
+      <div class="relative rounded-3xl overflow-hidden shadow-xl">
+        <img src="https://source.unsplash.com/random/600x400?burger" alt="Burger Restaurant" class="w-full h-48 object-cover" />
+        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-transparent">
+          <h3 class="text-lg font-semibold text-[var(--foreground)]">Burger Joint</h3>
+          <div class="flex items-center text-sm text-[var(--muted-foreground)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 mr-1">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7
+</body>
+</html>

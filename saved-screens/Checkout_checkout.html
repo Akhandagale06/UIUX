@@ -1,0 +1,103 @@
+<div class="relative w-full min-h-screen bg-[var(--background)]">
+  <div class="overflow-y-auto scrollbar-none">
+
+    <header class="sticky top-0 z-50 bg-[var(--card)]/80 backdrop-blur-xl shadow-lg p-4">
+      <h1 class="text-2xl font-bold text-[var(--foreground)]">Checkout</h1>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[var(--foreground)] mb-4">Order Summary</h2>
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl p-4">
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <img src="https://source.unsplash.com/50x50/?food&1" alt="Item 1" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="text-[var(--foreground)] font-medium">Spicy Tuna Roll</p>
+                  <p class="text-[var(--muted-foreground)] text-sm">x 1</p>
+                </div>
+              </div>
+              <p class="text-[var(--foreground)]">$12.99</p>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <img src="https://source.unsplash.com/50x50/?food&2" alt="Item 2" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="text-[var(--foreground)] font-medium">California Roll</p>
+                  <p class="text-[var(--muted-foreground)] text-sm">x 2</p>
+                </div>
+              </div>
+              <p class="text-[var(--foreground)]">$15.98</p>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center space-x-4">
+                <img src="https://source.unsplash.com/50x50/?food&3" alt="Item 3" class="w-12 h-12 rounded-full">
+                <div>
+                  <p class="text-[var(--foreground)] font-medium">Salmon Nigiri</p>
+                  <p class="text-[var(--muted-foreground)] text-sm">x 3</p>
+                </div>
+              </div>
+              <p class="text-[var(--foreground)]">$20.97</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[var(--foreground)] mb-4">Delivery Address</h2>
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl p-4 flex items-center space-x-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin text-[var(--primary)]">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <div>
+            <p class="text-[var(--foreground)] font-medium">123 Main St</p>
+            <p class="text-[var(--muted-foreground)] text-sm">Anytown, CA 91234</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-xl font-semibold text-[var(--foreground)] mb-4">Payment Method</h2>
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl p-4">
+          <div class="flex items-center space-x-4">
+            <input type="radio" id="credit-card" name="payment-method" class="h-5 w-5 accent-[var(--primary)]">
+            <label for="credit-card" class="text-[var(--foreground)] font-medium">Credit Card</label>
+          </div>
+          <div class="flex items-center space-x-4 mt-3">
+            <input type="radio" id="paypal" name="payment-method" class="h-5 w-5 accent-[var(--primary)]">
+            <label for="paypal" class="text-[var(--foreground)] font-medium">PayPal</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl p-4">
+          <div class="flex justify-between items-center mb-2">
+            <p class="text-[var(--muted-foreground)]">Subtotal</p>
+            <p class="text-[var(--foreground)]">$49.94</p>
+          </div>
+          <div class="flex justify-between items-center mb-2">
+            <p class="text-[var(--muted-foreground)]">Delivery Fee</p>
+            <p class="text-[var(--foreground)]">$3.00</p>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-[var(--muted-foreground)]">Tax</p>
+            <p class="text-[var(--foreground)]">$2.50</p>
+          </div>
+          <hr class="my-3 border-[var(--border)]">
+          <div class="flex justify-between items-center">
+            <p class="text-xl font-semibold text-[var(--foreground)]">Total</p>
+            <p class="text-xl font-semibold text-[var(--foreground)]">$55.44</p>
+          </div>
+        </div>
+      </section>
+
+      <button class="w-full bg-[var(--primary)] text-[var(--primary-foreground)] py-3 rounded-full text-lg font-semibold shadow-xl hover:bg-[hsl(var(--primary-rgb),100% , 40%)] transition-colors duration-200">Place Order</button>
+
+    </main>
+
+  </div>
+</div>

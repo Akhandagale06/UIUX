@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  <style>
+    
+:root {
+  --background: #fbf7fb;
+  --foreground: #221827;
+
+  --card: #ffffff;
+  --card-foreground: #221827;
+
+  --popover: #ffffff;
+  --popover-foreground: #221827;
+
+  --primary: #b24c7c;
+  --primary-rgb: 178, 76, 124;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1e6f0;
+  --secondary-foreground: #221827;
+
+  --muted: #efe2ed;
+  --muted-foreground: #6b5871;
+
+  --accent: #3aa6a6;
+  --accent-foreground: #0f172a;
+
+  --destructive: #e23a53;
+
+  --border: #e4d6e2;
+  --input: #ffffff;
+  --ring: #b24c7c;
+
+  --radius: 0.75rem;
+
+  /* charts */
+  --chart-1: #b24c7c;
+  --chart-2: #3aa6a6;
+  --chart-3: #f0a24f;
+  --chart-4: #6a4fb3;
+  --chart-5: #2f6fdf;
+}
+
+    body { background-color: var(--background); color: var(--foreground); }
+  </style>
+</head>
+<body>
+  <div class="relative w-full min-h-screen bg-[var(--background)]">
+  <div class="overflow-y-auto scrollbar-none">
+
+    <div class="relative">
+      <img src="https://source.unsplash.com/random/1000x600?food" alt="Restaurant Hero" class="w-full h-64 object-cover object-center rounded-b-3xl">
+      <div class="absolute bottom-0 left-0 p-6 text-[var(--foreground)]">
+        <h1 class="text-3xl font-bold">Delicious Restaurant</h1>
+        <div class="flex items-center mt-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star text-[var(--primary)] mr-1">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span class="text-sm">4.5 (250+ ratings)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-6">
+      <h2 class="text-2xl font-semibold text-[var(--foreground)] mb-4">Popular Items</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300?burger" alt="Burger" class="w-full h-40 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[var(--foreground)]">Juicy Burger</h3>
+            <p class="text-sm text-[var(--muted-foreground)]">With all the fixings</p>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xl font-bold text-[var(--foreground)]">$12.99</span>
+              <button class="bg-[var(--primary)] hover:bg-[hsl(var(--primary-rgb), 80%)] text-[var(--primary-foreground)] rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300?pizza" alt="Pizza" class="w-full h-40 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[var(--foreground)]">Pepperoni Pizza</h3>
+            <p class="text-sm text-[var(--muted-foreground)]">Classic favorite</p>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xl font-bold text-[var(--foreground)]">$15.50</span>
+              <button class="bg-[var(--primary)] hover:bg-[hsl(var(--primary-rgb), 80%)] text-[var(--primary-foreground)] rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300?sushi" alt="Sushi" class="w-full h-40 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[var(--foreground)]">Sushi Platter</h3>
+            <p class="text-sm text-[var(--muted-foreground)]">Fresh and delicious</p>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xl font-bold text-[var(--foreground)]">$18.00</span>
+              <button class="bg-[var(--primary)] hover:bg-[hsl(var(--primary-rgb), 80%)] text-[var(--primary-foreground)] rounded-full p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="16" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] rounded-2xl shadow-xl overflow-hidden">
+          <img src="https://source.unsplash.com/random/400x300?pasta" alt="Pasta" class="w-full h-40 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[var(--foreground)]">Spaghetti Carbonara</h3>
+            <p class="text-sm text-[var(--muted-foreground)]">Creamy and flavorful</p>
+            <div class="flex items-center justify-between mt-2">
+              <span class="text-xl font-bold text-[var(--foreground)]">$14.75</span>
+              <button class="bg-[var(--primary)] hover:bg-[hsl(var
+</body>
+</html>
