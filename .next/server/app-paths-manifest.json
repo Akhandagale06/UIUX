@@ -1,8 +1,4 @@
 {
-  "/api/save-screen/route": "app/api/save-screen/route.js",
-  "/api/user-projects/route": "app/api/user-projects/route.js",
-  "/api/user/project/route": "app/api/user/project/route.js",
-  "/page": "app/page.js",
-  "/project/[projectId]/page": "app/project/[projectId]/page.js",
-  "/dashboard/page": "app/dashboard/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
 }
